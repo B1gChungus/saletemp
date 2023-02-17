@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <!--navbar is a flex conatiner, change the flex-grow in the sass to alter where the left bar ends up and the sizings-->
+    <div id="nav">
+        <!--navigation links to other pages/locations on the current page-->
+        <a href="/home">HOME</a>
+        <a href="/about">ABOUT ME</a>
+        <a href="/contact">CONTACT</a>
+        <a href="/login">LOGIN</a>
+    </div>
+    <div class = "coverpage">
+        <img src = "../images/stock.gif">
+        <!-- a video in the background can be played, otherwise it is left blank -->
+        <h1 id="welcome">Welcome, <%= user.name %>, to the best adoption center in america
+        </h1>
+    </div>
+    <div class="companyinfo">
+        <div class="infocard">
+            <img src="https://picsum.photos/200" class="headerimg">
+            <h3>UNRIVALED POWER</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque esse numquam sit nulla sunt at? Lorem,
+                ipsum dolor sit amet consectetur adipisicing elit. Labore impedit quod ullam iure esse reprehenderit
+                repudiandae amet culpa eligendi hic.</p>
+        </div>
+        <div class="infocard">
+            <img src="https://picsum.photos/200" class="headerimg">
+            <h3>UNRIVALED POWER</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque esse numquam sit nulla sunt at? Lorem,
+                ipsum dolor sit amet consectetur adipisicing elit. Labore impedit quod ullam iure esse reprehenderit
+                repudiandae amet culpa eligendi hic.</p>
+        </div>
+        <div class="infocard">
+            <img src="https://picsum.photos/200" class="headerimg">
+            <h3>UNRIVALED POWER</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque esse numquam sit nulla sunt at? Lorem,
+                ipsum dolor sit amet consectetur adipisicing elit. Labore impedit quod ullam iure esse reprehenderit
+                repudiandae amet culpa eligendi hic.</p>
+        </div>
+    </div>
+</body>
+
+</html>

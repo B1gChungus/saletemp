@@ -1,9 +1,287 @@
+* {
+  color: #c8c8c8;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 body {
   margin: 0;
+  background-color: #1e1e1e;
 }
 
 #nav {
   display: flex;
   margin: 0;
   padding: 3px;
-}/*# sourceMappingURL=index.css.map */
+  background-color: #232323;
+  height: 3rem;
+  justify-content: right;
+  gap: 20px;
+  align-items: center;
+  padding-right: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#welcome {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 0px 0px 5px black;
+}
+
+.coverpage {
+  height: calc(100vh - 3rem);
+  z-index: 0;
+  display: inline-block;
+  width: 100%;
+  height: calc(100vh - 3rem);
+  background-color: #282828;
+  border: 0;
+  position: relative;
+}
+
+.coverpage img {
+  width: 100%;
+  height: 100%;
+}
+
+.coverhalf {
+  height: calc(50vh - 3rem);
+  z-index: 0;
+  display: flex;
+  width: calc(100% - 12rem);
+  padding: 3rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  background-color: #232323;
+}
+
+.coverhalf h1 {
+  width: 100%;
+  display: inline-block;
+  height: 10%;
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.coverhalf p {
+  width: 70%;
+  margin: auto;
+  height: 90%;
+  font-size: 35px;
+  text-align: center;
+}
+
+.coverhalf img {
+  display: inline-block;
+}
+
+.primary {
+  background-color: #1e1e1e;
+}
+
+.full {
+  height: calc(100vh - 8rem);
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.full h1 {
+  height: 50%;
+  width: 40%;
+  margin: auto;
+  font-size: 30px;
+}
+
+.companyinfo {
+  background-color: #232323;
+  width: calc(100% - 40px);
+  display: flex;
+  height: 40vh;
+  padding: 20px;
+  gap: 50px;
+  justify-content: center;
+}
+
+.infocard {
+  background-color: #2d2d2d;
+  width: 25%;
+  display: inline-block;
+  height: calc(100% - 60px);
+  padding: 30px;
+}
+
+.infocard > .headerimg {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  display: inline-block;
+  position: absolute;
+}
+
+.infocard > h3 {
+  display: inline-block;
+  width: calc(100% - 110px);
+  padding-left: 100px;
+  padding-bottom: 9%;
+  font-size: 40px;
+}
+
+.infocard > p {
+  height: 50%;
+  font-size: 20px;
+}
+
+#contactmain {
+  width: 75vw;
+  height: 60vh;
+  display: flex;
+  margin: auto;
+  background-color: #282828;
+  margin-top: calc(50vh - 3rem - 30vh - 25px);
+}
+
+#contactmain > .left {
+  padding: 50px;
+  margin: 0;
+  height: 100%;
+  width: 35%;
+  background-color: #232323;
+}
+
+#contactmain > .left h1 {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+#contactmain > .left p {
+  font-size: 20px;
+}
+
+#contactmain > .right {
+  padding: 50px;
+  padding-top: 25px;
+  margin: 0;
+  margin-top: 25px;
+  height: 100%;
+  width: 65%;
+  background-color: #282828;
+}
+
+#contactmain > .right button {
+  width: 110px;
+  height: 40px;
+  background-color: #1e1e1e;
+  border: 0;
+  font-size: 20px;
+}
+
+#contactmain > .right li {
+  list-style-type: none;
+  margin-bottom: 25px;
+}
+
+#contactmain > .right li p {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+#contactmain > .right li input {
+  width: calc(100% - 15px);
+  height: 40px;
+  border: 0;
+  padding: 5px;
+  padding-left: 10px;
+  font-size: 25px;
+  color: white;
+  background-color: #1e1e1e;
+  outline: none;
+}
+
+#contactmain > .right li textarea {
+  width: 100%;
+  height: 165px;
+  resize: none;
+  color: white;
+  background-color: #1e1e1e;
+  border: 0;
+  outline: none;
+  font-size: 15px;
+}
+
+.loginmain {
+  height: calc(100vh - 3rem);
+  display: flex;
+  width: 100%;
+}
+
+.loginmain .login1 {
+  width: 70%;
+  background-color: #1e1e1e;
+  padding: 10rem;
+}
+
+.loginmain .login2 {
+  width: 30%;
+  background-color: #232323;
+  padding: 6rem;
+}
+
+.loginmain .login2 img {
+  width: 75%;
+  height: 35%;
+  margin: auto;
+  display: block;
+  margin-bottom: 60px;
+  margin-top: 50px;
+}
+
+#loginform {
+  margin-top: 50px;
+}
+
+#loginform p {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+#loginform input {
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 40px;
+  outline: none;
+  background-color: #2d2d2d;
+  border: 0;
+  font-size: 20px;
+}
+
+#loginform button {
+  display: inline-block;
+  margin-right: 25px;
+  width: 8rem;
+  height: 3rem;
+  outline: none;
+  background-color: #2d2d2d;
+  border: 0;
+  font-size: 20px;
+}
+/*# sourceMappingURL=index.css.map */

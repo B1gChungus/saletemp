@@ -9,8 +9,11 @@ const fs = require('fs');
 //routers
 const userRouter = require('./Routes/user');
 //admin page
-const adminPage = fs.readFileSync(__dirname + '/interface/index.html', 'utf-8');
+app.set('view engine', 'ejs')
 
+const user = {
+  name: "Cheeseburger"
+}
 
 /**
  * App
@@ -34,27 +37,26 @@ app.use(express.static(__dirname + '/frontend'));
 
 //these require authentication at the given time
 app.use('/', async (req, res, next) => {
-  if (
-    false &&
-    (!(await checkToken(req.get('token'))) || req.get('token') == undefined)
-  ) {
-    return res.send({ success: false, msg: 'invalid/no token' });
-  }
+  // if (
+  //   (!(await checkToken(req.get('token'))) || req.get('token') == undefined)
+  // ) {
+  //   return res.send({ success: false, msg: 'invalid/no token' });
+  // }
 
   next();
 });
 
 app.get("/home", (req, res) => {
-  res.sendFile(path.join(__dirname + "/frontend/pages/index.html"));
+  res.render(path.join(__dirname + "/frontend/pages/index"), { user });
 })
 app.get("/contact", (req, res) => {
-  res.sendFile(path.join(__dirname + "/frontend/pages/contact.html"))
+  res.render(path.join(__dirname + "/frontend/pages/contact"), { user })
 })
 app.get("/login", (req, res) => {
-  res.sendFile(path.join(__dirname + "/frontend/pages/login.html"))
+  res.render(path.join(__dirname + "/frontend/pages/login"), { user })
 })
 app.get("/about", (req, res) => {
-  res.sendFile(path.join(__dirname + "/frontend/pages/about.html"))
+  res.render(path.join(__dirname + "/frontend/pages/about"), { user })
 })
 
 
